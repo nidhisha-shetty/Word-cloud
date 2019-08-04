@@ -1,0 +1,19 @@
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+from PIL import Image
+import os
+import numpy as np
+
+currdir = os.path.dirname(__file__)  # getting the path of the current directory under which this .py file is executed.
+text= "python Javascript python you have more than 10 libraries, organize them by sections (such as basic libs, visualization, models, etc.) using comments in the code will make your code clean and easy to follow. Now, using pandas read_csv to load in the dataframe. Notice the use of index_col=0 meaning we don't read in row name (index) as a separated column."
+#this text used to create the wordcloud
+
+our_mask=np.array(Image.open(os.path.join(currdir, "tiger.png"))) #search for image in the current directory
+
+cloud= WordCloud(background_color='white', mask=our_mask, contour_width=3, contour_color='firebrick').generate(text)
+
+cloud.to_file(os.path.join(currdir, "result.png")) #word cloud will be created in the current directory with the image name as reesult.png
+
+plt.imshow(cloud) #drawing the word cloud graph
+plt.axis('off') #disabling the axis
+plt.show() #displaying the result
