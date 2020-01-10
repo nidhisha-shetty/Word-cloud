@@ -12,7 +12,7 @@ our_mask=np.array(Image.open(os.path.join(currdir, "tiger.png"))) #search for im
 
 cloud= WordCloud(background_color='white', mask=our_mask, contour_width=3, contour_color='firebrick').generate(text)
 
-cloud.to_file(os.path.join(currdir, "result.png")) #word cloud will be created in the current directory with the image name as reesult.png
+cloud.to_file(os.path.join(currdir, "result.png")) #word cloud will be created in the current directory with the image name as result.png
 
 plt.imshow(cloud) #drawing the word cloud graph
 plt.axis('off') #disabling the axis
