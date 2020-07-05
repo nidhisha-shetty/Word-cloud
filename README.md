@@ -1,5 +1,5 @@
 # About the project
-It is a python program that generates a WordCloud fom the given text, the size of the word on WordCloud determines how important/frequent it is. 
+It is a python program that generates a WordCloud from the given text, the size of the word on WordCloud determines how important/frequent it is. 
 
 ## Steps
 1. Install `wordcloud` package using `pip install wordcloud` command.
